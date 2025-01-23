@@ -8,17 +8,20 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="logo">Memojar</div>
-    <nav class="nav">
-      <button id="menu-toggle" class="menu-toggle">☰</button>
-      <ul id="menu" class="menu hidden">
-        <li><a href="#public-memories">Public Memories</a></li>
-        <li><a href="#add-memory">Add Memory</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="main-header">
+    <div class="header-top">
+      <div class="logo">Memojar</div>
+      <div class="header-actions">
+        <button class="icon-button" id="search-button">🔍</button>
+        <button class="icon-button" id="menu-button">☰</button>
+      </div>
+    </div>
+    <!-- Sub-header with navigation icons -->
+    <div class="header-nav">
+      <button class="nav-icon" id="home-icon">🏠 Home</button>
+      <button class="nav-icon" id="add-icon">➕ Add Memory</button>
+      <button class="nav-icon" id="message-icon">💬 Messages</button>
+    </div>
   </header>
 
   <!-- Public Memories Section -->
@@ -33,20 +36,10 @@
         <button class="comment-button">💬 Comment</button>
       </div>
     </div>
-
-    <div class="memory-post">
-      <h2>@another_user</h2>
-      <p>My achievement of completing the marathon!</p>
-      <img src="assets/images/sample2.jpg" alt="Memory Image" class="memory-image">
-      <div class="actions">
-        <button class="like-button">❤️ Like</button>
-        <button class="comment-button">💬 Comment</button>
-      </div>
-    </div>
   </section>
 
   <!-- Add Memory Section -->
-  <section id="add-memory" class="add-memory">
+  <section id="add-memory" class="add-memory hidden">
     <h1>Add a Memory</h1>
     <form>
       <label for="memory-title">Title</label>
@@ -70,14 +63,18 @@
     </form>
   </section>
 
-  <!-- Footer -->
+  <!-- Messages Section -->
+  <section id="messages-page" class="messages-page hidden">
+    <h1>Messages</h1>
+    <p>Coming soon: Chat with friends about your memories!</p>
+  </section>
+
   <footer>
     <div class="footer-nav">
       <ul>
         <li><a href="#public-memories">Public Memories</a></li>
         <li><a href="#add-memory">Add Memory</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#messages-page">Messages</a></li>
       </ul>
     </div>
     <p>©2025 Memojar</p>
