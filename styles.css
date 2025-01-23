@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+h1, h2, h3 {
+    color: #4CAF50;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"], input[type="number"], select {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Image Preview Section */
+.image-preview {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+}
+
+.result {
+    display: none;
+}
+
+/* Call to Action */
+.bg-indigo-600 {
+    background-color: #4CAF50;
+}
+
+/* Hover Effect for Buttons */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+footer a:hover {
+    background-color: #555;
+    color: #ddd;
+}
