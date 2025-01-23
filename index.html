@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memojar - Home</title>
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/fonts/font-awesome.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto p-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-indigo-600">Memojar</div>
+      <nav>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
+          <li><a href="profile.html" class="hover:text-indigo-600">Profile</a></li>
+          <li><a href="messages.html" class="hover:text-indigo-600">Messages</a></li>
+        </ul>
+        <button id="menuBtn" class="md:hidden text-xl"><i class="fas fa-bars"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6">
+    <!-- Search Bar -->
+    <div class="relative mb-6">
+      <input 
+        type="text" 
+        placeholder="Search memories or users..." 
+        class="w-full p-4 pl-10 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500"
+      >
+      <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+    </div>
+
+    <!-- Memory Cards -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Sample Memory Card -->
+      <div class="bg-white p-4 shadow rounded-lg">
+        <img src="assets/images/sample.jpg" alt="Memory" class="w-full rounded-lg mb-4">
+        <h3 class="text-lg font-semibold">Trip to the Mountains</h3>
+        <p class="text-gray-600">A beautiful trip to the Himalayas.</p>
+        <button class="mt-2 text-indigo-600 hover:underline">Read More</button>
+      </div>
+      <!-- More cards can be dynamically added here -->
+    </section>
+
+    <!-- Call-to-Action -->
+    <div class="mt-12 p-6 bg-indigo-600 text-white rounded-lg text-center shadow-md">
+      <h2 class="text-2xl font-bold">Create Your First Memory</h2>
+      <p class="mt-2">Share your life moments with the world!</p>
+      <button class="mt-4 bg-white text-indigo-600 py-2 px-6 rounded-lg shadow-md hover:bg-gray-100">
+        Get Started
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white mt-12">
+    <div class="container mx-auto p-6">
+      <ul class="space-y-4">
+        <li><a href="about.html" class="hover:text-indigo-400">About</a></li>
+        <li><a href="privacy.html" class="hover:text-indigo-400">Privacy Policy</a></li>
+        <li><a href="terms.html" class="hover:text-indigo-400">Terms of Service</a></li>
+      </ul>
+      <p class="mt-6 text-center">©2025 Memojar. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
