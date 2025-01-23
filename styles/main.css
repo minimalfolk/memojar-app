@@ -9,125 +9,94 @@ body {
   font-family: 'Arial', sans-serif;
   background: #f9f9f9;
   line-height: 1.6;
+  padding-top: 120px; /* Space for sticky header */
 }
 
 /* Header */
-.header {
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: #4CAF50;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .logo {
   font-size: 1.5rem;
 }
 
-.nav {
+.header-actions {
   display: flex;
-  align-items: center;
+  gap: 15px;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  color: white;
+.icon-button {
+  font-size: 1.2rem;
   background: none;
   border: none;
+  color: white;
+  cursor: pointer;
 }
 
-.menu {
+.header-nav {
   display: flex;
-  gap: 20px;
+  justify-content: space-around;
+  padding: 10px 0;
+  background: #388E3C;
 }
 
-.menu.hidden {
+.nav-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-icon:hover {
+  color: #C8E6C9;
+}
+
+/* Sections */
+.hidden {
   display: none;
 }
 
-.menu li {
-  list-style: none;
-}
-
-.menu li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Public Memories Section */
-.public-memories {
+.public-memories, .add-memory, .messages-page {
   padding: 20px;
-  background: #fff;
 }
 
 .memory-post {
-  background: #f1f1f1;
-  margin-bottom: 20px;
-  padding: 10px;
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .memory-image {
   width: 100%;
-  border-radius: 8px;
-}
-
-.actions {
+  border-radius: 5px;
   margin-top: 10px;
 }
 
 .actions button {
-  margin-right: 10px;
-  padding: 8px 12px;
-  border: none;
-  background: #4CAF50;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.actions button:hover {
-  background: #45a049;
-}
-
-/* Add Memory Section */
-.add-memory {
-  padding: 20px;
-  background: #fff;
-}
-
-.add-memory form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.add-memory input, 
-.add-memory textarea, 
-.add-memory select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: 100%;
-}
-
-.submit-button {
-  padding: 10px;
+  margin-top: 10px;
   background: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
+  padding: 8px 10px;
   cursor: pointer;
-}
-
-.submit-button:hover {
-  background: #45a049;
 }
 
 /* Footer */
