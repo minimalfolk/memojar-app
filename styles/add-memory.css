@@ -1,0 +1,53 @@
+/* Add Memory Section */
+#add-memory-section {
+  padding: 20px;
+  background: var(--bg-color);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#add-memory-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#add-memory-section form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+#add-memory-section form select,
+#add-memory-section form input,
+#add-memory-section form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+}
+
+#add-memory-section form button {
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+#add-memory-section form button:hover {
+  background-color: var(--secondary-color);
+}
+
+#add-memory-section form button:active {
+  transform: scale(0.95);
+}
