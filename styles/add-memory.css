@@ -1,53 +1,93 @@
-/* Add Memory Section */
-#add-memory-section {
+/* Basic Layout for Add Memory Section */
+#add-memory {
+  background-color: #f9f9f9;
   padding: 20px;
-  background: var(--bg-color);
-  border: 1px solid #ddd;
-  border-radius: var(--border-radius);
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#add-memory-section h3 {
+/* Add Memory Title */
+#add-memory h1 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-#add-memory-section form label {
-  display: block;
-  margin: 10px 0 5px;
+/* Form Styles */
+#add-memory form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields and Textarea */
+#add-memory label {
   font-size: 16px;
+  color: #333;
   font-weight: 600;
-  color: var(--text-color);
 }
 
-#add-memory-section form select,
-#add-memory-section form input,
-#add-memory-section form textarea {
+#add-memory input[type="text"],
+#add-memory select,
+#add-memory textarea,
+#add-memory input[type="file"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius);
-  font-size: 16px;
+  box-sizing: border-box;
 }
 
-#add-memory-section form button {
-  padding: 10px 15px;
-  background-color: var(--primary-color);
-  color: #fff;
+/* Textarea specific styling */
+#add-memory textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Submit Button */
+#add-memory .submit-button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  transition: background-color 0.3s ease;
 }
 
-#add-memory-section form button:hover {
-  background-color: var(--secondary-color);
+#add-memory .submit-button:hover {
+  background-color: #45a049;
 }
 
-#add-memory-section form button:active {
-  transform: scale(0.95);
+/* File Upload Button */
+#add-memory input[type="file"] {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #add-memory {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  #add-memory h1 {
+    font-size: 20px;
+  }
+
+  #add-memory .submit-button {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
