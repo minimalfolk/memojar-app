@@ -1,21 +1,3 @@
-// Navigation Buttons
-document.getElementById('home-icon').addEventListener('click', () => {
-  document.getElementById('public-memories').classList.remove('hidden');
-  document.getElementById('add-memory').classList.add('hidden');
-  document.getElementById('messages-page').classList.add('hidden');
-});
-
-document.getElementById('add-icon').addEventListener('click', () => {
-  document.getElementById('add-memory').classList.remove('hidden');
-  document.getElementById('public-memories').classList.add('hidden');
-  document.getElementById('messages-page').classList.add('hidden');
-});
-
-document.getElementById('message-icon').addEventListener('click', () => {
-  document.getElementById('messages-page').classList.remove('hidden');
-  document.getElementById('public-memories').classList.add('hidden');
-  document.getElementById('add-memory').classList.add('hidden');
-});
 document.addEventListener('DOMContentLoaded', function() {
   // Section Elements
   const homeSection = document.getElementById('public-memories');
@@ -40,18 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
   showActiveSection(lastActiveSection);
 
   // Event listeners for navigation buttons
-  document.getElementById('home-icon').addEventListener('click', function() {
-    localStorage.setItem('lastActiveSection', 'public-memories');
-    showActiveSection('public-memories');
-  });
+  function setupNavButtonListener(buttonId, sectionId) {
+    document.getElementById(buttonId).addEventListener('click', function() {
+      localStorage.setItem('lastActiveSection', sectionId);
+      showActiveSection(sectionId);
+    });
+  }
 
-  document.getElementById('add-icon').addEventListener('click', function() {
-    localStorage.setItem('lastActiveSection', 'add-memory');
-    showActiveSection('add-memory');
-  });
-
-  document.getElementById('message-icon').addEventListener('click', function() {
-    localStorage.setItem('lastActiveSection', 'messages-page');
-    showActiveSection('messages-page');
-  });
+  setupNavButtonListener('home-icon', 'public-memories');
+  setupNavButtonListener('add-icon', 'add-memory');
+  setupNavButtonListener('message-icon', 'messages-page');
 });
