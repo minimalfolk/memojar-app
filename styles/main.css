@@ -68,22 +68,22 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white; /* White background */
+  background-color: #fff; /* White background */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 20;
   z-index: 1000; /* Ensure it stays on top of other content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Boxy shadow with light blur */
 }
 
 .sticky-nav button {
-  background-color: transparent;
-  color: #333; /* Dark color for text */
-  font-size: 1.2rem;
+  background-color: #44494e66;
+  color: #040404; /* Dark color for text */
+  font-size: 0.8rem;
   border: none;
   cursor: pointer;
-  padding: 12px 20px;
+  padding: 10px 8px;
   transition: background-color 0.3s ease;
 }
 
