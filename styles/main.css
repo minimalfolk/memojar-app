@@ -9,7 +9,7 @@ body {
   font-family: 'Arial', sans-serif;
   background: #f9f9f9;
   line-height: 1.6;
-  padding-top: 120px; /* Space for sticky header */
+  padding-top: 80px; /* Adjusted for better spacing with sticky header */
 }
 
 /* Header */
@@ -18,7 +18,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: #2f4df3f0;
+  background: #4CAF50; /* Green theme */
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -27,11 +27,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 12px 20px;
 }
 
 .logo {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .header-actions {
@@ -45,53 +46,42 @@ body {
   border: none;
   color: white;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.header-nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  background: #388E3C;
+.icon-button:hover {
+  opacity: 0.7;
 }
 
-.nav-icon {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* Sticky Sub-header */
+/* Sticky Navigation */
 .sticky-nav {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* White background */
+  background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  padding: 10px 20;
-  z-index: 1000; /* Ensure it stays on top of other content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Boxy shadow with light blur */
+  padding: 12px 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.sticky-nav button {
-  background-color: #44494e66;
-  color: #040404; /* Dark color for text */
-  font-size: 0.8rem;
+.nav-icon {
+  background: none;
   border: none;
+  color: #333;
+  font-size: 1rem;
   cursor: pointer;
-  padding: 10px 8px;
-  transition: background-color 0.3s ease;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
 }
 
-/* When a section is opened, change the button to light blue */
-.sticky-nav button.active {
-  background-color: #a8d8ff; /* Light blue background when active */
-  color: #333; /* Dark text color to contrast with the light blue */
-  border-radius: 5px; /* Optional: add border radius for a rounded look */
+.nav-icon:hover, .nav-icon.active {
+  background: #C8E6C9; /* Light green hover */
+  color: #333;
+  border-radius: 5px;
 }
 
 /* Sections */
@@ -101,14 +91,27 @@ body {
 
 .public-memories, .add-memory, .messages-page {
   padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Memory Post */
 .memory-post {
   background: #fff;
-  margin-bottom: 15px;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.memory-post h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
 .memory-image {
@@ -117,14 +120,56 @@ body {
   margin-top: 10px;
 }
 
-.actions button {
+.actions {
   margin-top: 10px;
+}
+
+.actions button {
   background: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
-  padding: 8px 10px;
+  padding: 8px 12px;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.actions button:hover {
+  background: #388E3C;
+}
+
+/* Add Memory Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.submit-button {
+  background: #2f4df3;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #1e3cb3;
 }
 
 /* Footer */
@@ -132,12 +177,12 @@ footer {
   background: #333;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
+  margin-top: 20px;
 }
 
 .footer-nav ul {
   list-style: none;
-  margin-bottom: 10px;
 }
 
 .footer-nav ul li {
@@ -150,7 +195,38 @@ footer {
   text-decoration: none;
 }
 
-/* Prevent content from being hidden behind the sticky sub-header */
-.content {
-  padding-bottom: 60px; /* Ensure content has enough space at the bottom for the sticky bar */
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .header-top {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .icon-button {
+    font-size: 1rem;
+  }
+
+  .nav-icon {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .sticky-nav {
+    padding: 10px 0;
+  }
+
+  .public-memories, .add-memory, .messages-page {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .memory-post {
+    padding: 12px;
+  }
 }
